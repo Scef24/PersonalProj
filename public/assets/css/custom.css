@@ -1,0 +1,230 @@
+@font-face {
+    font-family: lightfont;
+    src: url('../fonts/Roboto-Light.ttf');
+  }
+@font-face {
+    font-family: medfont;
+    src: url('../fonts/Roboto-Medium.ttf');
+  }
+@font-face {
+    font-family: regfont;
+    src: url('../fonts/Roboto-Regular.ttf');
+  }
+
+
+
+.shelves {
+     border-right: 1px solid black;
+    width: 15rem;
+    margin-left: 2rem;
+}
+.s-class {
+    border: 1px solid black;
+    margin-top: 5rem;
+    border-radius: 5px;
+    padding-top: 1.8rem;
+    height: 5rem;
+    width: 10rem;
+    align-content: center;
+}
+.con{
+
+    margin-left: 0rem;
+    margin-bottom: 5rem;
+}
+.list-of-books{
+    float: left;
+    border-top: 1px solid black;
+    margin-top: -36rem;
+    margin-left:30rem;
+    width:70rem;
+}
+img {
+    height: 60px;
+    width: 60px;
+}
+.contents {
+    display:flex;
+    width: 100%;
+    align-items: start;
+    justify-content: space-around;
+
+}
+button{
+    margin-right: 2.3rem;
+    border: none !important;
+}
+button:focus{
+    border: none !important;
+    outline: none !important;
+}
+#userInfoContainer {
+    display: flex;
+    justify-content: right;
+    color:white;
+    margin-top: 1.1rem;
+}
+#userName{
+font-family: regfont;
+color: white;
+margin-left: -30rem;
+margin-bottom: 2.4rem;
+font-size: 1.3rem;
+}
+#userRole{
+    font-family: lightfont;
+    font-size: .85rem;
+    margin-left: -3rem;
+    margin-top: 1.6rem;
+}
+
+#dropdownLib{
+    display: flex;
+    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+    padding: 20px;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    background-color:white;
+    z-index: 10;
+}
+#userimg{
+    height: 61px;
+    width: 61px;
+    margin-left: 2.05rem;
+}
+#cpc{
+    position: relative;
+    height: 70px;
+    width: 70px;
+    margin-left: 2.05rem;
+    border: 2px solid white;
+    border-radius: 100px;
+}
+
+.nav-item{
+    align-content: center;
+}
+#nav-lib{
+    background:#001278;
+    height: 5rem;
+}
+#ttle{
+    color:white;
+    font-size: 30px;
+    margin-right: -4.8rem;
+}
+
+#shadow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      position: relative;
+      margin-left: 58.5rem;
+      width: 15rem;
+      height: 5rem;
+      border-top-left-radius: 5rem;
+      border-bottom-left-radius: 5rem;
+      border-color: #03092e;
+      background-color: #03092e;
+      z-index: 0;
+  }
+
+#cont{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    /* padding: 20px; */
+    width:100%;
+    height: 80px;
+    background-color: white;
+}
+#yourbooks{
+    width: 120px;
+    height: 45px;
+    color: white;
+    background-color: #031676;
+    border-radius: 5px;
+    border: none;
+}
+
+#yourbooks:hover{
+    color: #031676;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #031676;
+    transition: 0.3s;
+}
+
+#pendingbooks{
+    width: 170px;
+    height: 45px;
+    margin-left: -26.5rem;
+    color: white;
+    background-color: #031676;
+    border-radius: 5px;
+    border: none;
+}
+
+#pendingbooks:hover{
+    color: #031676;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #031676;
+    transition: 0.3s;
+}
+#ease{
+    width: 0px;
+    height: 32px;
+    background-color: white;
+    border-radius: 5px;
+    transition: ease 0.2s;
+}
+#ease:hover{
+    color: white;
+    background-color: #031676;
+    border-radius: 5px;
+    width: 232px;
+    transition: ease 0.4s;
+
+}
+#btnanim{
+    width: 232px;
+    height: 30px;
+    text-align: left;
+    color: black;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 50px;
+}
+
+#btnanim:hover{
+    color: white;
+    border-radius: 5px;
+    width: 232px;
+    transition: ease 0.4s;
+}
+
+#ddlib{
+
+    float: left;
+    color: white;
+
+}
+#dropdown{
+    margin-right: 30rem;
+}
+
+
+
+/* Adjust the size of pagination buttons */
+/* Hide the arrow buttons in Bootstrap 5 pagination */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    display: none;
+}
+/* Adjust styles for "Previous" and "Next" buttons in Bootstrap 5 pagination */
+

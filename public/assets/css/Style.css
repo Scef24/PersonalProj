@@ -1,0 +1,119 @@
+ @media (max-width: 0) { 
+@include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-down(md) { ... }
+@include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
+@include media-breakpoint-down(xxl) { ... }
+
+
+@include media-breakpoint-down(md) {
+  .custom-class {
+    display: block;
+  }
+}
+ } 
+
+
+
+#custom-background {
+  background-image: url('../images/login.jpg'); /* Specify your image URL */
+  background-size: cover;
+  background-position:  center;     /*login ni siya*/ 
+  
+}
+
+#bg-color{
+background-color: rgb(42, 36, 36);
+}
+
+.form-Label{
+  color:white;
+  display:inline-block; 
+  width  : 120px;
+} 
+
+.form-label{
+  color:black   ;
+  display:inline-block; 
+  width  : 120px;
+}
+
+.form-outline {
+  display: flex; /* Use flexbox for consistent alignment */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 1rem; 
+}
+.mb-4{
+  color:white;
+}   /* Kutob diri ang login*/
+
+.left-align {
+  float: right;
+}
+
+.custom-navbar {
+  border-width: 1px;
+  border-radius: 1px;
+
+}
+
+
+#dropdownLib {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    position: absolute;
+    margin-left: 58.95rem;
+    margin-top: .3rem;
+    width: 7rem;
+    height: 4.3rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    border-color: white;
+    background-color: white;
+}
+
+#userInfoContainer{
+  /* position: absolute; */
+  display: relative; 
+  justify-content: left;
+  margin-left: 6.8rem;
+  z-index: 20;
+  color: white;   /*tapos diri sa navigation bar na*/
+}
+
+#userName {
+  display: relative; 
+  justify-content: left;
+  color: white;   /*tapos diri sa navigation bar na*/
+}
+
+
+/* Media queries for responsiveness */
+/* Apply changes for larger devices as the screen size increases */
+@media (min-width: 576px) { /* Small devices (sm) */
+  /* Styles for small devices */
+  /* Example: .custom-class { styles } */
+}
+
+@media (min-width: 768px) { /* Medium devices (md) */
+  /* Styles for medium devices */
+  /* Example: .custom-class { styles } */
+}
+
+@media (min-width: 992px) { /* Large devices (lg) */
+  /* Styles for large devices */
+  /* Example: .custom-class { styles } */
+}
+
+@media (min-width: 1200px) { /* Extra-large devices (xl) */
+  /* Styles for extra-large devices */
+  /* Example: .custom-class { styles } */
+}
+
+@media (min-width: 1400px) { /* Double extra-large devices (xxl) */
+  /* Styles for double extra-large devices */
+  /* Example: .custom-class { styles } */
+}
+
+
