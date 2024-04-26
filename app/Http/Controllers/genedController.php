@@ -71,18 +71,26 @@ class genedController extends Controller
 
            return redirect('librarianhome')->with('sucess','Succesfully Updated');
     }
-    public function delete($id) {
-            $gened= GenEd::find($id);
+    public function delete($id)
+    {
+        try {
+
+            $gened = GenEd::findOrFail($id);
+
             $gened->delete();
+            return redirect('librarianhome')->with('success', 'Record deleted successfully.');
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
 
-            return redirect('librarianhome');
+            return redirect('librarianhome')->with('error', 'No record found with that ID.');
+        }
+        }
 
-       }
        public function addCopy(Request $request, $id) {
             $gened = GenEd::find($id);
             $gened->increment('copy');
             $gened->save();
 
             return redirect('librarianhome')->with('success','Copy Adde Succesfully');
+
        }
 }

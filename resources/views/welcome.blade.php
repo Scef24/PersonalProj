@@ -107,6 +107,7 @@
          <h5 class="card-title">{{$book->title}}</h5>
          <p class="card-text">This is a sample book</p>
          <p class="card-text"><b>Publisher:</b> {{$book->publisher}}</p>
+         <p class="card-text"><b>Copies Available :</b>{{$book->copy}} </p>
          <a type = "button" data-bs-toggle="modal" data-bs-target="#b" class="btn btn-primary pull-left"><i class="fa fa-plus" aria-hidden="true"></i>BORROW</i></a>
          @include('borrowModal',['book' => $book])
 

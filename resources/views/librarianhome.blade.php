@@ -1,7 +1,17 @@
 @extends('layout')
 @include('include.header')
-
 @section('content')
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 <div class="title">
 
 </div>
@@ -86,5 +96,13 @@
 <div class="paginator">
     {{ $geneds->links()}}
 </div>
+
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('.alert').fadeOut('slow');
+        }, 3000);
+    });
+    </script>
 
 @endsection

@@ -21,9 +21,16 @@ class BorrowedBooksController extends Controller
     public function saveBorrowedBooks($book)
     {
         $user = auth()->user();
-        $date = request('date');
+        $data = request()->validate([
+            'date' => 'required|date|after_or_equal:today',
+        ]);
 
+        $date = $data['date'];
         $Bbook = GenEd::find($book);
+
+        if (!$Bbook) {
+            return redirect(route('home'))->with('error', 'The book cannot be found.');
+        }
 
         if ($Bbook->copy > 1) {
             $pending = "pending";
@@ -37,17 +44,16 @@ class BorrowedBooksController extends Controller
                 'publisher' => $Bbook->publisher,
                 'date_borrowed' => $date,
                 'date_returned' => Carbon::parse($date)->addDays(3),
-
             ]);
 
-            $Bbook->decrement('copy');
 
-            return redirect(route('home'))->with('success','Success Please claim to the Library');
+
+            return redirect(route('home'))->with('success', 'Success! Please claim the book at the library.');
         } else {
-
             return redirect(route('home'))->with('error', 'Sorry, this book is not available for borrowing.');
         }
     }
+
     public function showStudentBook(Request $request)
     {
         $user = $request->user();

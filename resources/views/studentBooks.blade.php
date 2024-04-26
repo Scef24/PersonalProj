@@ -23,9 +23,12 @@
                         @foreach($borrowedBooks as $borrowedbook)
                         <tr>
                             <td>{{$borrowedbook->bookTitle}}</td>
-                            <td>{{$borrowedbook->date_borrowed}}</td>
-                            <td>{{$borrowedbook->date_returned}}</td>
+                            {{-- <td>{{$borrowedbook->date_borrowed}}</td>
+                            <td>{{$borrowedbook->date_returned}}</td> --}}
+                            <td>{{Carbon\Carbon::parse($borrowedbook->date_borrowed)->format("F j, Y h:m a")}}</td>
+                            <td>{{Carbon\Carbon::parse($borrowedbook->date_returned)->format("F j, Y h:m a")}}</td>
                             <td>{{$borrowedbook->status}}</td>
+
                         </tr>
                 @endforeach
                     </tbody>

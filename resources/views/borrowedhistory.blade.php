@@ -8,7 +8,7 @@
     <body>
         <div class="row mt-5">
             <div class="col-md-12 col-md-offset">
-                <h2>Borrowed Books</h2>
+                <h2>Borrowed History</h2>
             </div>
             <div class="row">
                 <div class="col-md-12 col-md-offset-1">
@@ -25,7 +25,8 @@
                                 <td>{{$history->studName}}</td>
                                 <td>{{$history->bookTitle}}</td>
                                 <td>{{Carbon\Carbon::parse($history->date_borrowed)->format("F j, Y h:m a")}}</td>
-                                <td>{{$history->date_returned}}</td>
+                                {{-- <td>{{$history->date_returned}}</td> --}}
+                                <td>{{Carbon\Carbon::parse($history->date_returned)->format("F j, Y h:m a")}}</td>
                             </tr>
                             @endforeach
                         </tbody>

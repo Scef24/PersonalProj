@@ -57,7 +57,7 @@ class PendingBooksController extends Controller
         $pending= PendingBooks::find($id);
         $pending->delete();
 
-        $gened->increment('copy');
+        $gened->decrement('copy');
         return redirect(route('pendingBooks'));
 
    }

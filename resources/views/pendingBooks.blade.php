@@ -24,7 +24,8 @@
                         <tr>
                             <td>{{$pendings->studName}}</td>
                             <td>{{$pendings->bookTitle}}</td>
-                            <td>{{$pendings->date_borrowed}}</td>
+                            {{-- <td>{{$pendings->date_borrowed}}</td> --}}
+                            <td>{{Carbon\Carbon::parse($pendings->date_borrowed)->format("F j, Y h:m a")}}</td>
                             <td>{{$pendings->status}}</td>
                             <td>
                                 <form action="{{route('togglePending',$pendings->id)}}" method="post">
